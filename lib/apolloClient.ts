@@ -13,7 +13,6 @@ const createApolloClient = () => {
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
       uri: process.env.NEXT_PUBLIC_HASURA_URL,
-      // uri: 'https://leading-bull-20.hasura.app/v1/graphql',
       fetch,
       headers: {
         'x-hasura-admin-secret': process.env.NEXT_PUBLIC_HASURA_KEY,
